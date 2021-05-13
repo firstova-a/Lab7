@@ -34,6 +34,8 @@ namespace Laboratory7
 
                         if (searchRespons.IsSuccessStatusCode)
                         {
+                            //string responceText = await searchRespons.Content.ReadAsStringAsync();
+                            //Console.WriteLine(responceText);
                             SearchJson answer = await searchRespons.Content.ReadFromJsonAsync<SearchJson>();
                             if (answer.display_name != null)
                             {
